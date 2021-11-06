@@ -149,23 +149,21 @@ namespace FilesFullTrust.MessageHandlers
                         var enable = (bool)message["Value"];
                         var destFolder = Path.Combine(ApplicationData.Current.LocalFolder.Path, "FilesOpenDialog");
                         Directory.CreateDirectory(destFolder);
-                        if (enable)
+                        foreach (var file in Directory.GetFiles(Path.Combine(Package.Current.InstalledLocation.Path, "Files.Launcher", "Assets", "FilesOpenDialog")))
                         {
-                            foreach (var file in Directory.GetFiles(Path.Combine(Package.Current.InstalledLocation.Path, "Files.Launcher", "Assets", "FilesOpenDialog")))
+                            if (!Extensions.IgnoreExceptions(() => File.Copy(file, Path.Combine(destFolder, Path.GetFileName(file)), true), Program.Logger))
                             {
-                                if (!Extensions.IgnoreExceptions(() => File.Copy(file, Path.Combine(destFolder, Path.GetFileName(file)), true), Program.Logger))
-                                {
-                                    // Error copying files
-                                    DetectIsSetAsDefaultFileManager();
-                                    await Win32API.SendMessageAsync(connection, new ValueSet() { { "Success", false } }, message.Get("RequestID", (string)null));
-                                    return;
-                                }
+                                // Error copying files
+                                DetectIsSetAsDefaultFileManager();
+                                await Win32API.SendMessageAsync(connection, new ValueSet() { { "Success", false } }, message.Get("RequestID", (string)null));
+                                return;
                             }
                         }
 
                         try
                         {
-                            Win32API.RunPowershellCommand(@$"regedit.exe /s ""{Path.Combine(destFolder, enable ? "SetFilesAsDefault.reg" : "UnsetFilesAsDefault.reg")}""", true);
+                            using var regProcess = Process.Start("regedit.exe", @$"/s ""{Path.Combine(destFolder, enable ? "SetFilesAsDefault.reg" : "UnsetFilesAsDefault.reg")}""");
+                            regProcess.WaitForExit();
                             DetectIsSetAsDefaultFileManager();
                             await Win32API.SendMessageAsync(connection, new ValueSet() { { "Success", true } }, message.Get("RequestID", (string)null));
                         }
@@ -183,17 +181,14 @@ namespace FilesFullTrust.MessageHandlers
                         var enable = (bool)message["Value"];
                         var destFolder = Path.Combine(ApplicationData.Current.LocalFolder.Path, "FilesOpenDialog");
                         Directory.CreateDirectory(destFolder);
-                        if (enable)
+                        foreach (var file in Directory.GetFiles(Path.Combine(Package.Current.InstalledLocation.Path, "Files.Launcher", "Assets", "FilesOpenDialog")))
                         {
-                            foreach (var file in Directory.GetFiles(Path.Combine(Package.Current.InstalledLocation.Path, "Files.Launcher", "Assets", "FilesOpenDialog")))
+                            if (!Extensions.IgnoreExceptions(() => File.Copy(file, Path.Combine(destFolder, Path.GetFileName(file)), true), Program.Logger))
                             {
-                                if (!Extensions.IgnoreExceptions(() => File.Copy(file, Path.Combine(destFolder, Path.GetFileName(file)), true), Program.Logger))
-                                {
-                                    // Error copying files
-                                    DetectIsSetAsOpenFileDialog();
-                                    await Win32API.SendMessageAsync(connection, new ValueSet() { { "Success", false } }, message.Get("RequestID", (string)null));
-                                    return;
-                                }
+                                // Error copying files
+                                DetectIsSetAsOpenFileDialog();
+                                await Win32API.SendMessageAsync(connection, new ValueSet() { { "Success", false } }, message.Get("RequestID", (string)null));
+                                return;
                             }
                         }
 
