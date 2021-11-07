@@ -243,7 +243,7 @@ namespace Files.Helpers
         public static string ReadStringFromFile(string filePath)
         {
             IntPtr hStream = CreateFileFromApp(filePath,
-                GENERIC_READ, 0, IntPtr.Zero, OPEN_EXISTING, (uint)File_Attributes.BackupSemantics, IntPtr.Zero);
+                GENERIC_READ, FILE_SHARE_READ, IntPtr.Zero, OPEN_EXISTING, (uint)File_Attributes.BackupSemantics, IntPtr.Zero);
             if (hStream.ToInt64() == -1)
             {
                 return null;
