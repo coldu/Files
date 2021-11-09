@@ -786,11 +786,11 @@
           <source>Web link</source>
           <target state="translated">Web 链接</target>
         </trans-unit>
-        <trans-unit id="PropertiesDialogTabGeneral.Content" translate="yes" xml:space="preserve">
+        <trans-unit id="General" translate="yes" xml:space="preserve">
           <source>General</source>
           <target state="translated">常规</target>
         </trans-unit>
-        <trans-unit id="PropertiesDialogTabShortcut.Content" translate="yes" xml:space="preserve">
+        <trans-unit id="Shortcut" translate="yes" xml:space="preserve">
           <source>Shortcut</source>
           <target state="translated">快捷方式</target>
         </trans-unit>
@@ -1068,7 +1068,7 @@
         </trans-unit>
         <trans-unit id="PropertyItemTypeText" translate="yes" xml:space="preserve">
           <source>Item Type</source>
-          <target state="translated">项类型</target>
+          <target state="translated">项目类型</target>
         </trans-unit>
         <trans-unit id="PropertyTitle" translate="yes" xml:space="preserve">
           <source>Title</source>
@@ -1502,7 +1502,7 @@
           <source>Support us on PayPal</source>
           <target state="translated">通过 PayPal 支持我们</target>
         </trans-unit>
-        <trans-unit id="PropertiesDialogTabDetails.Content" translate="yes" xml:space="preserve">
+        <trans-unit id="Details" translate="yes" xml:space="preserve">
           <source>Details</source>
           <target state="translated">详细信息</target>
         </trans-unit>
@@ -1972,7 +1972,7 @@
         </trans-unit>
         <trans-unit id="HorizontalMultitaskingControlCloseTabsToTheRight.Text" translate="yes" xml:space="preserve">
           <source>Close tabs to the right</source>
-          <target state="translated">关闭选项卡到右侧</target>
+          <target state="translated">关闭右侧选项卡</target>
         </trans-unit>
         <trans-unit id="FullTrustStatusTeachingTip.Title" translate="yes" xml:space="preserve">
           <source>Administrator</source>
@@ -2014,7 +2014,7 @@
           <source>Library</source>
           <target state="translated">库</target>
         </trans-unit>
-        <trans-unit id="PropertiesDialogTabLibrary.Content" translate="yes" xml:space="preserve">
+        <trans-unit id="Library" translate="yes" xml:space="preserve">
           <source>Library</source>
           <target state="translated">库</target>
         </trans-unit>
@@ -2254,11 +2254,11 @@
         </trans-unit>
         <trans-unit id="DetailsViewHeaderFlyout_ShowItemType.Text" translate="yes" xml:space="preserve">
           <source>Item type column</source>
-          <target state="translated">项类型列</target>
+          <target state="translated">类型</target>
         </trans-unit>
         <trans-unit id="DetailsViewHeaderFlyout_ShowDateModified.Text" translate="yes" xml:space="preserve">
           <source>Date modified column</source>
-          <target state="translated">日期修改列</target>
+          <target state="translated">修改日期</target>
         </trans-unit>
         <trans-unit id="DetailsViewHeaderFlyout_ShowDateDeleted.Text" translate="yes" xml:space="preserve">
           <source>Date deleted column</source>
@@ -2582,9 +2582,9 @@
         </trans-unit>
         <trans-unit id="NavigationToolbarNewPane.Label" translate="yes" xml:space="preserve">
           <source>New pane</source>
-          <target state="translated">新窗格</target>
+          <target state="translated">新面板</target>
         </trans-unit>
-        <trans-unit id="PropertiesDialogTabSecurity.Content" translate="yes" xml:space="preserve">
+        <trans-unit id="Security" translate="yes" xml:space="preserve">
           <source>Security</source>
           <target state="translated">安全</target>
         </trans-unit>
@@ -2718,7 +2718,7 @@
         </trans-unit>
         <trans-unit id="BundlesOpenInNewPane.Text" translate="yes" xml:space="preserve">
           <source>Open in new Pane</source>
-          <target state="translated">在新窗格中打开</target>
+          <target state="translated">在新面板中打开</target>
         </trans-unit>
         <trans-unit id="PropertyFileOwner" translate="yes" xml:space="preserve">
           <source>Owner</source>
@@ -2906,7 +2906,7 @@
         </trans-unit>
         <trans-unit id="NavigationToolbarClosePane.Label" translate="yes" xml:space="preserve">
           <source>Close pane</source>
-          <target state="translated">关闭窗格</target>
+          <target state="translated">关闭面板</target>
         </trans-unit>
         <trans-unit id="PropertyFileDescription" translate="yes" xml:space="preserve">
           <source>File description</source>
@@ -2986,11 +2986,11 @@
         </trans-unit>
         <trans-unit id="SettingsMultitaskingAlwaysOpenDualPane" translate="yes" xml:space="preserve">
           <source>Always open new tabs in dual pane mode</source>
-          <target state="translated">始终以双窗格模式打开新选项卡</target>
+          <target state="translated">始终以双面板模式打开新选项卡</target>
         </trans-unit>
         <trans-unit id="SettingsMultitaskingEnableDualPane" translate="yes" xml:space="preserve">
           <source>Enable dual pane view</source>
-          <target state="translated">启用双窗格视图</target>
+          <target state="translated">启用双面板视图</target>
         </trans-unit>
         <trans-unit id="SettingsVerticalTabFlyout" translate="yes" xml:space="preserve">
           <source>Display the vertical tab flyout on the title bar</source>
@@ -3247,6 +3247,7 @@ We use App Center to keep track of app usage, find bugs, and fix crashes. All in
   </source>
           <target state="translated">
 *个人信息收集* 
+
 Files 不收集、存储、共享或发布任何个人信息。
 
 *非个人信息收集*
@@ -3412,7 +3413,7 @@ Files 不收集、存储、共享或发布任何个人信息。
         </trans-unit>
         <trans-unit id="NavToolbarColumnsHeader.Text" translate="yes" xml:space="preserve">
           <source>Columns</source>
-          <target state="translated">列表</target>
+          <target state="translated">列视图</target>
         </trans-unit>
         <trans-unit id="NavToolbarDetailsHeader.Text" translate="yes" xml:space="preserve">
           <source>Details</source>
@@ -3532,7 +3533,7 @@ Files 不收集、存储、共享或发布任何个人信息。
         </trans-unit>
         <trans-unit id="DetailsViewHeaderFlyout_ShowItemSize.Text" translate="yes" xml:space="preserve">
           <source>Item size column</source>
-          <target state="translated">项目大小</target>
+          <target state="translated">大小</target>
         </trans-unit>
         <trans-unit id="SettingsDefaultExplorer" translate="yes" xml:space="preserve">
           <source>Default file explorer</source>
@@ -3560,35 +3561,143 @@ Files 不收集、存储、共享或发布任何个人信息。
         </trans-unit>
         <trans-unit id="ExportSettings" translate="yes" xml:space="preserve">
           <source>Export Settings</source>
-          <target state="new">Export Settings</target>
+          <target state="translated">导出设置</target>
         </trans-unit>
         <trans-unit id="ImportSettings" translate="yes" xml:space="preserve">
           <source>Import Settings</source>
-          <target state="new">Import Settings</target>
+          <target state="translated">导入设置</target>
         </trans-unit>
         <trans-unit id="ManageSettings" translate="yes" xml:space="preserve">
           <source>Manage Settings</source>
-          <target state="new">Manage Settings</target>
+          <target state="translated">管理设置</target>
         </trans-unit>
         <trans-unit id="SettingsImportErrorDescription" translate="yes" xml:space="preserve">
           <source>Couldn't import settings. The settings file is corrupted.</source>
-          <target state="new">Couldn't import settings. The settings file is corrupted.</target>
+          <target state="translated">无法导入设置。设置文件已损坏。</target>
         </trans-unit>
         <trans-unit id="SettingsImportErrorTitle" translate="yes" xml:space="preserve">
           <source>Error importing settings</source>
-          <target state="new">Error importing settings</target>
+          <target state="translated">导入设置错误</target>
         </trans-unit>
         <trans-unit id="ChooseCustomIcon" translate="yes" xml:space="preserve">
           <source>Choose a custom folder icon</source>
-          <target state="new">Choose a custom folder icon</target>
+          <target state="translated">选择自定义文件夹图标</target>
         </trans-unit>
         <trans-unit id="Customization" translate="yes" xml:space="preserve">
           <source>Customization</source>
-          <target state="new">Customization</target>
+          <target state="translated">定制化</target>
         </trans-unit>
         <trans-unit id="RestoreDefault" translate="yes" xml:space="preserve">
           <source>Restore default</source>
-          <target state="new">Restore default</target>
+          <target state="translated">还原至默认</target>
+        </trans-unit>
+        <trans-unit id="Compatibility" translate="yes" xml:space="preserve">
+          <source>Compatibility</source>
+          <target state="new">Compatibility</target>
+        </trans-unit>
+        <trans-unit id="HighDpiOption_None" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="new">None</target>
+        </trans-unit>
+        <trans-unit id="HighDpiOption_UseDPIOnLogin" translate="yes" xml:space="preserve">
+          <source>On Windows login</source>
+          <target state="new">On Windows login</target>
+        </trans-unit>
+        <trans-unit id="HighDpiOption_UseDPIOnProgramStart" translate="yes" xml:space="preserve">
+          <source>On program start</source>
+          <target state="new">On program start</target>
+        </trans-unit>
+        <trans-unit id="HighDpiOverride_Application" translate="yes" xml:space="preserve">
+          <source>Application</source>
+          <target state="new">Application</target>
+        </trans-unit>
+        <trans-unit id="HighDpiOverride_None" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="new">None</target>
+        </trans-unit>
+        <trans-unit id="HighDpiOverride_System" translate="yes" xml:space="preserve">
+          <source>System</source>
+          <target state="new">System</target>
+        </trans-unit>
+        <trans-unit id="HighDpiOverride_SystemAdvanced" translate="yes" xml:space="preserve">
+          <source>System (advanced)</source>
+          <target state="new">System (advanced)</target>
+        </trans-unit>
+        <trans-unit id="OSCompatibility_None" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="new">None</target>
+        </trans-unit>
+        <trans-unit id="OSCompatibility_Windows7" translate="yes" xml:space="preserve">
+          <source>Windows 7</source>
+          <target state="new">Windows 7</target>
+        </trans-unit>
+        <trans-unit id="OSCompatibility_Windows8" translate="yes" xml:space="preserve">
+          <source>Windows 8</source>
+          <target state="new">Windows 8</target>
+        </trans-unit>
+        <trans-unit id="OSCompatibility_WindowsVista" translate="yes" xml:space="preserve">
+          <source>Windows Vista</source>
+          <target state="new">Windows Vista</target>
+        </trans-unit>
+        <trans-unit id="OSCompatibility_WindowsVistaSP1" translate="yes" xml:space="preserve">
+          <source>Windows Vista SP1</source>
+          <target state="new">Windows Vista SP1</target>
+        </trans-unit>
+        <trans-unit id="OSCompatibility_WindowsVistaSP2" translate="yes" xml:space="preserve">
+          <source>Windows Vista SP2</source>
+          <target state="new">Windows Vista SP2</target>
+        </trans-unit>
+        <trans-unit id="ReducedColorMode_Color16Bit" translate="yes" xml:space="preserve">
+          <source>16 Bit Colors (65536)</source>
+          <target state="new">16 Bit Colors (65536)</target>
+        </trans-unit>
+        <trans-unit id="ReducedColorMode_Color8Bit" translate="yes" xml:space="preserve">
+          <source>8 Bit Colors (256)</source>
+          <target state="new">8 Bit Colors (256)</target>
+        </trans-unit>
+        <trans-unit id="ReducedColorMode_None" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="new">None</target>
+        </trans-unit>
+        <trans-unit id="CompatibilityMode" translate="yes" xml:space="preserve">
+          <source>Compatibility mode</source>
+          <target state="new">Compatibility mode</target>
+        </trans-unit>
+        <trans-unit id="DisableFullscreenOptimizations" translate="yes" xml:space="preserve">
+          <source>Disable fullscreen optimizations</source>
+          <target state="new">Disable fullscreen optimizations</target>
+        </trans-unit>
+        <trans-unit id="ExecuteAt640X480" translate="yes" xml:space="preserve">
+          <source>Run at 640 x 480 screen resolution</source>
+          <target state="new">Run at 640 x 480 screen resolution</target>
+        </trans-unit>
+        <trans-unit id="Options" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target state="new">Options</target>
+        </trans-unit>
+        <trans-unit id="OverrideDPIScalingBehaviour" translate="yes" xml:space="preserve">
+          <source>Override high DPI scaling behaviour</source>
+          <target state="new">Override high DPI scaling behaviour</target>
+        </trans-unit>
+        <trans-unit id="ReducedColorMode" translate="yes" xml:space="preserve">
+          <source>Reduced color mode</source>
+          <target state="new">Reduced color mode</target>
+        </trans-unit>
+        <trans-unit id="RegisterForRestart" translate="yes" xml:space="preserve">
+          <source>Register for restart</source>
+          <target state="new">Register for restart</target>
+        </trans-unit>
+        <trans-unit id="RunAsAdministrator" translate="yes" xml:space="preserve">
+          <source>Run as administrator</source>
+          <target state="new">Run as administrator</target>
+        </trans-unit>
+        <trans-unit id="RunCompatibilityTroubleShooter" translate="yes" xml:space="preserve">
+          <source>Run compatibility troubleshooter</source>
+          <target state="new">Run compatibility troubleshooter</target>
+        </trans-unit>
+        <trans-unit id="UseMainMonitorDPISettings" translate="yes" xml:space="preserve">
+          <source>Use DPI settings of the main monitor</source>
+          <target state="new">Use DPI settings of the main monitor</target>
         </trans-unit>
       </group>
     </body>
