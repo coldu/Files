@@ -162,7 +162,7 @@ namespace FilesFullTrust.MessageHandlers
 
                         try
                         {
-                            using var regProcess = Process.Start("regedit.exe", @$"/s ""{Path.Combine(destFolder, enable ? "SetFilesAsDefault.reg" : "UnsetFilesAsDefault.reg")}""");
+                            using var regProcess = Process.Start(new ProcessStartInfo("regedit.exe", @$"/s ""{Path.Combine(destFolder, enable ? "SetFilesAsDefault.reg" : "UnsetFilesAsDefault.reg")}""") { UseShellExecute = true, Verb = "runas" });
                             regProcess.WaitForExit();
                             DetectIsSetAsDefaultFileManager();
                             await Win32API.SendMessageAsync(connection, new ValueSet() { { "Success", true } }, message.Get("RequestID", (string)null));
@@ -198,9 +198,13 @@ namespace FilesFullTrust.MessageHandlers
                                 regProc.WaitForExit();
                             using (var regProc = Process.Start("regsvr32.exe", @$"/s /n {(!enable ? "/u" : "")} /i:user ""{Path.Combine(destFolder, "CustomOpenDialog64.dll")}"""))
                                 regProc.WaitForExit();
+                            using (var regProc = Process.Start("regsvr32.exe", @$"/s /n {(!enable ? "/u" : "")} /i:user ""{Path.Combine(destFolder, "CustomOpenDialogARM64.dll")}"""))
+                                regProc.WaitForExit();
                             using (var regProc = Process.Start("regsvr32.exe", @$"/s /n {(!enable ? "/u" : "")} /i:user ""{Path.Combine(destFolder, "CustomSaveDialog32.dll")}"""))
                                 regProc.WaitForExit();
                             using (var regProc = Process.Start("regsvr32.exe", @$"/s /n {(!enable ? "/u" : "")} /i:user ""{Path.Combine(destFolder, "CustomSaveDialog64.dll")}"""))
+                                regProc.WaitForExit();
+                            using (var regProc = Process.Start("regsvr32.exe", @$"/s /n {(!enable ? "/u" : "")} /i:user ""{Path.Combine(destFolder, "CustomSaveDialogARM64.dll")}"""))
                                 regProc.WaitForExit();
 
                             DetectIsSetAsOpenFileDialog();
